@@ -10,6 +10,7 @@ This project was developed for **IIIT Hyderabad Felicity 2025's DeCore Club Even
 
 
 ### Links:
+- **Game Link**: [HexerGame](https://hexergame.netlify.app/)
 - **Felicity 2025**: [IIIT Hyderabad Felicity 2025](https://felicity.iiit.ac.in)
 - **DeCore IIITH**: [Decore the Design Club IIITH](https://clubs.iiit.ac.in/clubs/decore)
 ---
