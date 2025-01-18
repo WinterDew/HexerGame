@@ -1,5 +1,5 @@
 import React from "react";
-import ColorChip from "./colorChip";
+import ColorChip from "./ColorChip";
 import HexInput from "./HexInput";  // Import HexInput
 
 export default function ColorPanel({ color1, color2, updateGuess, guessesLeft}) {
