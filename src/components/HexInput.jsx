@@ -9,7 +9,7 @@ const HexInput = ({updateGuess}) => {
     function handleSubmit(){
 
         if(!isValidColor(inputVal.toLowerCase())){
-            console.log(inputVal);
+            // console.log(inputVal);
             triggerToast("Invalid hex color code. Please enter a valid 6-character hex code");
             setInputVal("");
             return;
