@@ -25,7 +25,7 @@ export const ToastProvider = ({ children }) => {
       {showToast && (
         <div className="toast toast-bottom toast-center">
           <div className="alert alert-warning">
-            <span>{toastMessage}</span>
+            <span className="text-xs md:text-base">{toastMessage}</span>
           </div>
         </div>
       )}
