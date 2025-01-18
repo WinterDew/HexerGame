@@ -8,7 +8,7 @@ export default function calculateColorStats(target, guess){
         const guessVal = parseInt(guess[i], 16);
         const diff = targetVal - guessVal;
         if(diff != 0) done = 0;
-        console.log(`Parsing: ${i} : target[${i}] = ${targetVal}, guess[${i}] = ${guessVal}, diff = ${diff}`);
+        // console.log(`Parsing: ${i} : target[${i}] = ${targetVal}, guess[${i}] = ${guessVal}, diff = ${diff}`);
         
         if (diff > 2) {
           stats.push(2); // Large positive difference
@@ -23,7 +23,7 @@ export default function calculateColorStats(target, guess){
         }
     }
 
-    console.log(stats);
-    console.log(done);
+    // console.log(stats);
+    // console.log(done);
     return ([done, stats]);
 }
