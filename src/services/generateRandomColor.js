@@ -3,6 +3,7 @@ function generateRandomHex(){
 }
 
 export default function generateRandomColor(){
+    console.log("Welcome To Hexer...");
     return (
         `#${generateRandomHex()}${generateRandomHex()}${generateRandomHex()}`
     );
