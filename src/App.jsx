@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import generateRandomColor from "./services/generateRandomColor";
 import ColorPanel from "./components/ColorsPanel";
 import ShowTries from "./components/ShowTries";
@@ -15,13 +15,27 @@ export default function App() {
   const [target, setTarget] = useState(generateRandomColor());
   const [guesses, setGuesses] = useState([]);
   const [isGameOver, setIsGameOver] = useState(0); // 0 no, 1 won, -1 lost.
-  const maxTries = 5;
+  const [maxTries, setMaxTries] = useState(5);
   function resetGame(){
     setCurrentGuess("");
     setTarget(generateRandomColor());
     setGuesses([]);
     setIsGameOver(0);
   }
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(document.location.search)
+    
+    if(searchParams.has("maxtries")){
+
+      var maxParam = searchParams.get("maxtries");
+      console.log(`The maxTries param recieved is : ${maxParam}`);
+      setMaxTries(maxParam > 0 ? maxParam : maxTries);
+    } else {
+      console.log("Set max number of tries can be set with the query param, e.g. ?maxtries=4");
+    }
+  })
+  
 
   // console.log(target);
 
